@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0D98F32011FD78008247FC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D98F22011FD78008247FC /* Game.swift */; };
+		BF0D98F52011FE9B008247FC /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D98F42011FE9B008247FC /* QuestionManager.swift */; };
+		BF0D98F720161E49008247FC /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D98F620161E49008247FC /* QuestionView.swift */; };
 		BFF22D26200F8C310067A77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF22D25200F8C310067A77B /* AppDelegate.swift */; };
 		BFF22D28200F8C310067A77B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF22D27200F8C310067A77B /* ViewController.swift */; };
 		BFF22D2B200F8C310067A77B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF22D29200F8C310067A77B /* Main.storyboard */; };
 		BFF22D2D200F8C310067A77B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF22D2C200F8C310067A77B /* Assets.xcassets */; };
 		BFF22D30200F8C310067A77B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF22D2E200F8C310067A77B /* LaunchScreen.storyboard */; };
+		BFF22D38200F8D340067A77B /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = BFF22D37200F8D330067A77B /* Balham.otf */; };
+		BFF22D40200F91130067A77B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF22D3F200F91130067A77B /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0D98F22011FD78008247FC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BF0D98F42011FE9B008247FC /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		BF0D98F620161E49008247FC /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		BFF22D22200F8C310067A77B /* OpenQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF22D25200F8C310067A77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF22D27200F8C310067A77B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,9 @@
 		BFF22D2C200F8C310067A77B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFF22D2F200F8C310067A77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFF22D31200F8C310067A77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF22D37200F8D330067A77B /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Balham.otf; path = ../../../../../Downloads/Balham.otf; sourceTree = "<group>"; };
+		BFF22D3E200F8F060067A77B /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		BFF22D3F200F91130067A77B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +65,52 @@
 		BFF22D24200F8C310067A77B /* OpenQuizz */ = {
 			isa = PBXGroup;
 			children = (
-				BFF22D25200F8C310067A77B /* AppDelegate.swift */,
-				BFF22D27200F8C310067A77B /* ViewController.swift */,
-				BFF22D29200F8C310067A77B /* Main.storyboard */,
-				BFF22D2C200F8C310067A77B /* Assets.xcassets */,
-				BFF22D2E200F8C310067A77B /* LaunchScreen.storyboard */,
 				BFF22D31200F8C310067A77B /* Info.plist */,
+				BFF22D3D200F8EC80067A77B /* Supporting Files */,
+				BFF22D3B200F8E730067A77B /* View */,
+				BFF22D3A200F8E690067A77B /* Controller */,
+				BFF22D39200F8E600067A77B /* Model */,
+				BFF22D37200F8D330067A77B /* Balham.otf */,
 			);
 			path = OpenQuizz;
+			sourceTree = "<group>";
+		};
+		BFF22D39200F8E600067A77B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D98F42011FE9B008247FC /* QuestionManager.swift */,
+				BFF22D3F200F91130067A77B /* Question.swift */,
+				BF0D98F22011FD78008247FC /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFF22D3A200F8E690067A77B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFF22D27200F8C310067A77B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFF22D3B200F8E730067A77B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFF22D29200F8C310067A77B /* Main.storyboard */,
+				BF0D98F620161E49008247FC /* QuestionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFF22D3D200F8EC80067A77B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFF22D25200F8C310067A77B /* AppDelegate.swift */,
+				BFF22D2C200F8C310067A77B /* Assets.xcassets */,
+				BFF22D2E200F8C310067A77B /* LaunchScreen.storyboard */,
+				BFF22D3E200F8F060067A77B /* Balham.otf */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +174,7 @@
 			files = (
 				BFF22D30200F8C310067A77B /* LaunchScreen.storyboard in Resources */,
 				BFF22D2D200F8C310067A77B /* Assets.xcassets in Resources */,
+				BFF22D38200F8D340067A77B /* Balham.otf in Resources */,
 				BFF22D2B200F8C310067A77B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF22D40200F91130067A77B /* Question.swift in Sources */,
 				BFF22D28200F8C310067A77B /* ViewController.swift in Sources */,
 				BFF22D26200F8C310067A77B /* AppDelegate.swift in Sources */,
+				BF0D98F52011FE9B008247FC /* QuestionManager.swift in Sources */,
+				BF0D98F720161E49008247FC /* QuestionView.swift in Sources */,
+				BF0D98F32011FD78008247FC /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
