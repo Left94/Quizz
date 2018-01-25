@@ -10,14 +10,18 @@ import UIKit
 
 class QuestionView: UIView {
 
-    @IBOutlet private var label: UILabel!
+   @IBOutlet private var label: UILabel!
    @IBOutlet private var icon: UIImageView!
     
     enum Style {
         case correct, incorrect, standard
     }
     
-    var style: Style = .standard
+    var style: Style = .standard {
+        didSet {
+            setStyle(style)
+        }
+    }
     
     var title = "" {
         didSet {
@@ -25,7 +29,7 @@ class QuestionView: UIView {
         }
     }
     
-    private func setStyle() {
+    private func setStyle(_ style: Style) {
         switch style {
         case .correct:
             backgroundColor = #colorLiteral(red: 0.4941176471, green: 0.8274509804, blue: 0.1294117647, alpha: 1)

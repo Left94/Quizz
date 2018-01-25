@@ -15,9 +15,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionView: QuestionView!
     
+    var game = Game()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let name = Notification.Name(rawValue: "QuestionsLoaded")
+        NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: name, object: nil)
+    }
+    
+    @objc func questionsLoaded() {
+        newGameButton.isHidden = false
+        activityIndicator.isHidden = true
+        questionView.title = game.currentQuestion.title
     }
 
    
@@ -35,6 +44,8 @@ class ViewController: UIViewController {
         questionView.style = .standard
         
         scoreLabel.text = "O / 10"
+        
+        game.refresh()
     
         
         
