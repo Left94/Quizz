@@ -14,7 +14,7 @@ class QuestionView: UIView {
    @IBOutlet private var icon: UIImageView!
     
     enum Style {
-        case correct, incorrect, standard
+        case correct, incorrect, standard, over
     }
     
     var style: Style = .standard {
@@ -32,7 +32,7 @@ class QuestionView: UIView {
     private func setStyle(_ style: Style) {
         switch style {
         case .correct:
-            backgroundColor = #colorLiteral(red: 0.4941176471, green: 0.8274509804, blue: 0.1294117647, alpha: 1)
+            backgroundColor = #colorLiteral(red: 0.7830607295, green: 0.9266828299, blue: 0.6277592182, alpha: 1)
             icon.image = #imageLiteral(resourceName: "Icon Correct")
             icon.isHidden = false
         case .incorrect:
@@ -41,6 +41,9 @@ class QuestionView: UIView {
             icon.isHidden = false
         case .standard:
             backgroundColor = #colorLiteral(red: 0.7502701879, green: 0.7679536343, blue: 0.7878373861, alpha: 1)
+            icon.isHidden = true
+        case .over:
+            backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.8409487985, blue: 0.4195843551, alpha: 1)
             icon.isHidden = true
         }
     }
